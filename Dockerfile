@@ -23,7 +23,8 @@ ENV GITLAB_INSTALL_DIR="${GITLAB_HOME}/gitlab" \
     GITLAB_DATA_DIR="${GITLAB_HOME}/data" \
     GITLAB_BUILD_DIR="${GITLAB_CACHE_DIR}/build" \
     GITLAB_RUNTIME_DIR="${GITLAB_CACHE_DIR}/runtime" \
-
+    HTTP_PROXY="10.184.44.185:3128" \
+    HTTPS_PROXY="10.184.44.185:3128"
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv E1DD270288B4E6030699E45FA1715D88E1DF1F24 \
  && echo "deb http://ppa.launchpad.net/git-core/ppa/ubuntu xenial main" >> /etc/apt/sources.list \
